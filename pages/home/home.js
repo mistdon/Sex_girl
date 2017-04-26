@@ -52,12 +52,13 @@ Page({
   },
   fetchTags() {
       this.showLoading('loading...');
-      console.log('url: ' + util.getUrl('/tags'));
-      return request({ method: 'GET', url: util.getUrl('/tags') });
+      console.log('url: ' + util.getUrl('/category/QiaoTun/page/1'));
+      return request({ method: 'GET', url: util.getUrl('/category/QiaoTun/page/1') });
   },
   fetchImgs(cid) {
       this.showLoading('loading...');
-      return request({ method: 'GET', url: util.getUrl('/girls', [{c:!util.isEmpty(cid)?cid:'xinggan'}, {p:this.data.page}, {m: this.data.mid}])});
+      //return request({ method: 'GET', url: util.getUrl('/girls', [{c:!util.isEmpty(cid)?cid:'xinggan'}, {p:this.data.page}, {m: this.data.mid}])});
+      return request({ method: 'GET', url: util.getUrl('/category/QiaoTun/page/1')});
   },
   showPreview(event) {
       if (this.data.showActionsSheet) {

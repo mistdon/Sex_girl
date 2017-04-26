@@ -1,3 +1,3 @@
 module.exports = {
-    baseDomain: 'https://meizi.leanapp.cn',
+    baseDomain: 'meizi.leanapp.cn',
 };

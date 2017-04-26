@@ -7,7 +7,7 @@ var app = express();
 var https = require('https');
 var fs = require('fs');
 
-var baseUrl = 'http://www.dbmeinv.com';
+var baseUrl = 'https://meizi.leanapp.cn';
 const successCode = 0, failCode = -1;
 
 function isEmpty(obj){
