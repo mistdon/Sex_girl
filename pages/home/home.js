@@ -124,25 +124,28 @@ Page({
       if (index != this.navBtnSelectIdx) {
           this.setData({navBtnSelectIdx: index, page: 1, mid: ''});
           this.fetchImgs(cid).then(resp => {
+              console.log
               this.imgRespHandler(resp, true);
           });
       }
   },
   imgRespHandler(resp, flush) {
       this.hideLoading();
-      if (resp.code != 0) {
-          this.showToast('load failed, try again...');
-          this.setData({page: this.data.page--});
-          return;
-      }
-      if (util.isEmpty(resp.data)) {
+      console.log('resp ',resp);
+    //   if (resp.code != 0) {
+    //       this.showToast('HHload failed, try again...HHH');
+    //       this.setData({page: this.data.page--});
+    //       return;
+    //   }
+      if (util.isEmpty(resp.results)) {
           this.setData({hasMore: false});
           this.showToast('all loaded...');
           this.setData({page: this.data.page--});
           return;
       }
       this.showToast('load successfully');
-      for (var index in resp.data) {
+      for (var index in resp.results) {
+          console.log(index, resp.results[index]);
           resp.data[index].largeSrc = util.imgUrlFix(resp.data[index].largeSrc);
           resp.data[index].thumbSrc = util.imgUrlFix(resp.data[index].thumbSrc);
           resp.data[index].smallSrc = util.imgUrlFix(resp.data[index].smallSrc);
