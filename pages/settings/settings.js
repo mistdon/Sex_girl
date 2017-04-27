@@ -1,11 +1,26 @@
 //index.js
+//获取应用实例
 var app = getApp()
 Page({
   data: {
-    githubLink: 'https://github.com/litt1e-p',
-    avatarLink: 'https://avatars2.githubusercontent.com/u/10734995?v=3&s=466'
+    motto: '一个生性浪漫、自由不羁却又渴望安定的女人，曾经为爱远走他乡，在撒哈拉荒漠中过着辛劳又甜蜜的主妇生活。她是陈平，笔名三毛，爱人荷西称她为“撒哈拉之心”。',
+    userInfo: {}
+  },
+  //事件处理函数
+  bindViewTap: function() {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
   },
   onLoad: function () {
-    // console.log('onLoad')
+    console.log('onLoad')
+    var that = this
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function(userInfo){
+      //更新数据
+      that.setData({
+        userInfo:userInfo
+      })
+    })
   }
 })

@@ -1,19 +1,28 @@
 /**settings.wxss**/
-.container-settings {
-    height:1200rpx;
-}
-.img-avatar {
-  width: 258rpx;
-  height: 258rpx;
-  margin: 20rpx auto;
-  margin-top: 40rpx;
-  border-radius: 50%;
-  display: block;
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  align-self: center;
 }
 
-.link-text {
-  color: #46bd3c;
-  margin-top: 20px;
-  position: absolute;
-  left: 20%;
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  /*margin: 60rpx;*/
+ margin-top: 150rpx;
+ margin-bottom: 50rpx;
+  align-content: center;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 80px;
+  align-content: center;
+  text-align: center;
 }

@@ -1,37 +1,26 @@
 {
-    "pages" : [
-        "pages/home/home",
-       "pages/settings/settings"
-    ],
-    "window" : {
-        "backgroundTextStyle":"light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Sex-girls",
-        "navigationBarTextStyle":"black",
-        "windowBackground": "#efeff4"
-    },
-    "tabBar" : {
-        "color" : "#999",
-        "selectedColor" : "#46bd3c",
-        "borderStyle" : "white",
-        "backgroundColor" : "#fefefe",
-        "list" : [
-            {
-                "text" : "home",
-                "pagePath" : "pages/home/home",
-                "iconPath" : "images/tabBar/tabbar_home_normal.png",
-                "selectedIconPath" : "images/tabBar/tabbar_home_selected.png"
-            },
-            {
-                "text" : "setting",
-                "pagePath" : "pages/settings/settings",
-                "iconPath" : "images/tabBar/tabbar_setting_normal.png",
-                "selectedIconPath" : "images/tabBar/tabbar_setting_selected.png"
-            }
-        ]
-    },
-    "networkTimeout" : {
-        "request" : 12000
-    },
-    "debug" : false
+  "pages":[
+    "pages/index/index",
+    "pages/settings/settings",
+    "pages/image/image"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fece6b",
+    "navigationBarTitleText": "深夜女人香",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "夜来香",
+      "iconPath": "images/tabBar/tabbar_home_normal.png",
+      "selectedIconPath": "images/tabBar/tabbar_home_selected.png"
+    },{
+      "pagePath": "pages/settings/settings",
+      "text": "我的",
+      "iconPath": "images/tabBar/tabbar_setting_normal.png",
+      "selectedIconPath": "images/tabBar/tabbar_setting_selected.png"
+    }]
+  }
 }

@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="topics-main">
+  <view class="top-bar">
+    <view class="top-bar-item" id="QingXin" catchtap="onTapTag">清新</view>
+    <view class="top-bar-item" id="QiaoTun" catchtap="onTapTag">翘臀</view>
+    <view class="top-bar-item" id="HeiSi" catchtap="onTapTag">黑丝</view>
+    <view class="top-bar-item" id="MeiTui" catchtap="onTapTag">美腿</view>
+    <view class="top-bar-item" id="DaXiong" catchtap="onTapTag">大胸</view>
+  </view>
+</view>
+<view>
+  
+  <view class= "card" wx:for = "{{items}}">
+  
+    <view  data-url="{{item.url}}" bindtap = "onItemClick">
+       <image class= "image" mode="aspectFit" src="{{item.url}}"/>
+       <view class="title">{{item.title}}</view>
+    </view>
+
+  </view>
+
+</view>
+
